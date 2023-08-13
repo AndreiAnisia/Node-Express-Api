@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "ES2020", // Target ECMAScript version
+        "module": "NodeNext", // Module system
+        "moduleResolution": "NodeNext",
+        "outDir": "./dist", // Output directory for compiled files
+        "rootDir": "./src", // Source directory
+        "strict": true, // Enable strict type checking
+        "sourceMap": true, // Generate source maps
+        "esModuleInterop": true, // Enable import/export interoperability
+        "forceConsistentCasingInFileNames": true, // Enforce consistent file casing
+        "resolveJsonModule": true, // Allow importing JSON files
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "include": [
+        "src/**/*.ts" // Source files to include in compilation
+    ],
+    "exclude": [
+        "node_modules" // Exclude node_modules from compilation
+    ]
+}
