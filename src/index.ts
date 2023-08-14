@@ -19,6 +19,7 @@ app.use(cookieParser());
 // Route handlers
 app.use('/register', require('./routes/register'));
 app.use('/auth', require('./routes/auth'));
+app.use('/logout', require('./routes/logout'));
 
 app.use(errorHandler);
 
