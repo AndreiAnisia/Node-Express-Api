@@ -16,13 +16,13 @@ const handleRegister: CustomController = async (req, res) => {
     }
 
     try {
-        const hashedPassword = bcrypt.hash(password, saltRounds);
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
         await User.create({
             username,
-            hashedPassword,
+            password: hashedPassword,
         });
 
-        res.json(201).json({ 'message': `New user ${username} created!` });
+        res.status(201).json({ 'message': `New user ${username} created!` });
     } catch (err) {
         if (err instanceof Error) {
             res.status(500).json({ 'message': err.message })
